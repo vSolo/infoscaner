@@ -325,13 +325,13 @@ if __name__ == '__main__':
             else:
                 print_info('目标未开启匿名登录')
     elif Dir_crawl == True and output == None:      # 目录爬取
-        url_list = get_dir()
+        url_list = get_dir(url=url)
         url_table = PrettyTable(['目录'])
         for url in url_list:
             url_table.add_row([url])
         print(url_table)
     elif Dir_crawl == True and output != None:      # 目录爬取并输出
-        url_list = get_dir()
+        url_list = get_dir(url=url)
         if os.path.exists(output):
             choice = print_input('文件已经存在 是否覆盖[y/n] ')
             if choice == 'y' or choice == 'Y' or choice == 'yes' or choice == 'YES' or choice == '是':
