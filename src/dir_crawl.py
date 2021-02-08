@@ -51,13 +51,13 @@ def rad_dir(url):
     return url_list
     
     
-def get_dir():
+def get_dir(url):
     url_list = []
-    crawlergo_url_list = crawlergo_dir('http://testphp.vulnweb.com/')
+    crawlergo_url_list = crawlergo_dir(url)
     print_info('crawlergo扫描完成')
     # print(crawlergo_url_list)
     # print(len(crawlergo_url_list))
-    rad_url_list = rad_dir('http://testphp.vulnweb.com/')
+    rad_url_list = rad_dir(url)
     print_info('radium扫描完成')
     for rad_url in rad_url_list:
         url_list.append(rad_url)
