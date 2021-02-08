@@ -1,3 +1,5 @@
+import time
+
 import requests
 from config import settings
 from common.search import Search
@@ -33,8 +35,7 @@ class GithubAPI(Search):
             msg = resp_json.get('message')
             logger.log('ERROR', msg)
             return False
-        else:
-            return True
+        return True
 
     def search(self):
         """
@@ -51,6 +52,7 @@ class GithubAPI(Search):
             return
         page = 1
         while True:
+            time.sleep(self.delay)
             params = {'q': self.domain, 'per_page': 100,
                       'page': page, 'sort': 'indexed'}
             try:
@@ -83,7 +85,7 @@ class GithubAPI(Search):
         """
         类执行入口
         """
-        if not self.check(self.token):
+        if not self.have_api(self.token):
             return
         self.begin()
         self.search()
@@ -104,4 +106,4 @@ def run(domain):
 
 
 if __name__ == '__main__':
-    run('exmaple.com')
+    run('example.com')

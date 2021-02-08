@@ -1,4 +1,6 @@
-chrome_path = '/opt/google/chrome/google-chrome'
-rad_json_output_file = './output/rad_urls.txt'
-sublist3r_output_file = './scan_file/sublist3r.txt'
-OneForAll_output_file = './scan_file/oneforall.txt'
+chrome_path = '/opt/google/chrome/google-chrome'    # chrome安装路径
+crawlergo_threads = "10"                        # crawlergo线程
+zoomeye_username = "emailforgty@163.com"        # Zoomeye账号
+zoomeye_password = "gty991214"                  # Zoomeye密码
+login_url = 'https://api.zoomeye.org/user/login'                                            # Zoomeye的登陆地址
+unscan_suffix = ['.jpg', '.png', '.gif', '.js', '.css', '.ico', '.txt', '.gov.cn']          # 不扫描的文件后缀

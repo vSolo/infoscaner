@@ -1,16 +1,15 @@
 import os
-from sys import stdout
 from collections import OrderedDict
-from contextlib import contextmanager
 from inspect import isclass
 
-from .tablib import tablib
 from sqlalchemy import create_engine, exc, inspect, text
+
+from .tablib import tablib
 
 DATABASE_URL = os.environ.get('DATABASE_URL')
 
 
-def isexception(obj):
+def is_exception(obj):
     """Given an object, return a boolean indicating whether it is an instance
     or subclass of :py:class:`Exception`.
     """
@@ -212,7 +211,7 @@ class RecordCollection(object):
         try:
             record = self[0]
         except IndexError:
-            if isexception(default):
+            if is_exception(default):
                 raise default
             return default
 
@@ -276,7 +275,7 @@ class Database(object):
     def __repr__(self):
         return '<Database open={}>'.format(self.open)
 
-    def get_table_names(self, internal=False):
+    def get_table_names(self):
         """Returns a list of table names for the connected database."""
 
         # Setup SQLAlchemy for Database inspection.

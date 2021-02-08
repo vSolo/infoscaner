@@ -4,10 +4,10 @@ import re
 from prettytable import PrettyTable
 from src.get_user_agent import *
 import whois
-import nmap
-import sys
+import json
+from pprint import pprint
 
-def chinaz_whois_search(whois_url, write=False, output=None):
+def aizhan_whois_search(whois_url, write=False, output=None):
     # print(whois_url)
     url = 'http://whois.aizhan.com/'
     result_url = url + whois_url + '/'
@@ -115,7 +115,7 @@ def who_is_whois_search(whois_url, write=False, output=None):
         time.sleep(0.5)
         print(name_server_table)
     elif write == True:
-        f = open(output, 'a')
+        f = open(output, 'w')
         f.write('\n\nwho.is查询到的信息如下' + '\n\n')
         f.write(NAME + '      ' + name + '\n')
         f.write(WHOIS_SERVER + '      ' + whois_server + '\n')
@@ -135,29 +135,31 @@ def who_is_whois_search(whois_url, write=False, output=None):
     
 
 def python_whois_search(url, output=None):
-    print_info('通过python模块获取whois信息')
-    whois_info = {}
+    print_info('通过python的whois模块获取信息')
     try:
         whois_info = whois.whois(url)
+        print_info('获取到' + url + '的whois信息')
     except:
         print_error('输入的url格式有问题')
         print_error('退出程序')
         exit(0)
-    if output == None:
+    if output == None:      # 输出表
+        whois_table = PrettyTable(['Search', 'result'])
         for k, v in whois_info.items():
-            print(color.blue('------------------' + str(k) + '--------------------'))
-            print(color.yellow(str(k) + '  ' + str(v)))
-            print(color.blue('---------------------------------------------\n'))
+            if isinstance(v, list):
+                result_str = ''
+                for i in v:
+                    result_str += str(i) + '\n'
+                whois_table.add_row([k, result_str])
+            else:
+                whois_table.add_row([k, str(v)])
+        print(whois_table)
     else:
         try:
-            f = open(output, 'a')
-            f.write('\n\n----------------------------python-whois----------------------------\n')
-            for k, v in whois_info.items():
-                f.write('------------------' + str(k) + '--------------------' + '\n')
-                f.write(str(k) + '  ' + str(v) + '\n')
-                f.write('---------------------------------------------\n')
+            f = open(output, 'w')
+            f.write(str(whois_info))
+            print_info('成功将whois信息写入' + output)
             f.close()
-            print_info('who.is成功获取到whois信息')
-            print_info('成功将文件写入到' + color.yellow(output))
         except:
             print_error('输出路径错误')
+

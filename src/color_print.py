@@ -1,15 +1,5 @@
 from colorama import init, Fore, Back, Style
 import time
-import colorama
-
-G = '\033[92m'  # green
-Y = '\033[93m'  # yellow
-B = '\033[94m'  # blue
-R = '\033[91m'  # red
-W = '\033[0m'   # white
-
-
-colorama.init()
 
 
 class Colored(object):
@@ -44,15 +34,6 @@ class Colored(object):
 
 color = Colored()
 
-
-def print_blue_white(info):
-    print(
-        B 
-        + time.strftime("%Y-%m-%d")
-        + ' '
-        + time.strftime("%H:%M:%S")
-        + W)
-
 def print_flush(info):
     print(
         color.white("[")
@@ -81,13 +62,10 @@ def print_flush_two(info):
 
 def print_info(info):
     print(
-        B 
-        + time.strftime("%Y-%m-%d")
-        + ' '
-        + time.strftime("%H:%M:%S")
-        + W
+        color.blue(time.strftime("%Y-%m-%d") + ' ')
+        + color.blue(time.strftime("%H:%M:%S"))
         + color.white(" [")
-        + color.green("INFOR")
+        + color.green("INFO")
         + color.white("]")
         + color.white(' - ')
         + color.green(info)
@@ -96,13 +74,10 @@ def print_info(info):
 
 def print_error(info):
     print(
-        B 
-        + time.strftime("%Y-%m-%d")
-        + ' '
-        + time.strftime("%H:%M:%S")
-        + W
+        color.blue(time.strftime("%Y-%m-%d") + ' ')
+        + color.blue(time.strftime("%H:%M:%S"))
         + color.white(" [")
-        + color.red("ERROR")
+        + color.red("ERRO")
         + color.white("]")
         + color.white(' - ')
         + color.red(info)
@@ -111,13 +86,10 @@ def print_error(info):
 
 def print_warn(info):
     print(
-        B 
-        + time.strftime("%Y-%m-%d")
-        + ' '
-        + time.strftime("%H:%M:%S")
-        + W
+        color.blue(time.strftime("%Y-%m-%d") + ' ')
+        + color.blue(time.strftime("%H:%M:%S"))
         + color.white(" [")
-        + color.yellow("ALTER")
+        + color.yellow("WARN")
         + color.white("]")
         + color.white(' - ')
         + color.yellow(info)
@@ -126,11 +98,8 @@ def print_warn(info):
 
 def print_input(info):
     result = input(
-        B 
-        + time.strftime("%Y-%m-%d")
-        + ' '
-        + time.strftime("%H:%M:%S")
-        + W
+        color.blue(time.strftime("%Y-%m-%d") + ' ')
+        + color.blue(time.strftime("%H:%M:%S"))
         + color.white(" [")
         + color.green("INFOR")
         + color.white("]")
@@ -141,10 +110,17 @@ def print_input(info):
 
 
 def print_msg():
-    msg = ''' _          __                                            
-(_) _ __   / _|  ___   ___   ___  __ _  _ __    ___  _ __ 
-| || '_ \ | |_  / _ \ / __| / __|/ _` || '_ \  / _ \| '__|      Version: 0.1        
-| || | | ||  _|| (_) |\__ \| (__| (_| || | | ||  __/| |         Author:CMACCKK
-|_||_| |_||_|   \___/ |___/ \___|\__,_||_| |_| \___||_|         Email: emailforgty@163.com
+    print(color.cyan('\nThis is an integrated information collection tool'))
+    msg1 = ''' _          __                                            
+(_) _ __   / _|  ___   ___   ___  __ _  _ __    ___  _ __ '''
+    print(color.cyan(msg1))
+    msg2 = '''| || '_ \ | |_  / _ \ / __| / __|/ _` || '_ \  / _ \| '__|      Version: 0.2'''
+    print(color.yellow(msg2))
+    msg3 = '''| || | | ||  _|| (_) |\__ \| (__| (_| || | | ||  __/| |         Author:CMACCKK'''
+    print(color.magenta(msg3))
+    msg4 = '''|_||_| |_||_|   \___/ |___/ \___|\__,_||_| |_| \___||_|         Email: emailforgty@163.com
 '''
-    print(color.blue(msg))
+    print(color.blue(msg4))
+    msg5 = 'Thanks for: PROTECT Elinpf mooneee 0xss kuaiyulong liszero godlike008\n'
+    print(color.red(msg5))
+

@@ -1,5 +1,5 @@
 import re
-import tldextract
+from common import tldextract
 from config import settings
 
 
@@ -23,8 +23,7 @@ class Domain(object):
         result = re.search(self.regexp, self.string, re.I)
         if result:
             return result.group()
-        else:
-            return None
+        return None
 
     def extract(self):
         """
@@ -39,12 +38,11 @@ class Domain(object):
         """
         data_storage_dir = settings.data_storage_dir
         extract_cache_file = data_storage_dir.joinpath('public_suffix_list.dat')
-        ext = tldextract.TLDExtract(extract_cache_file, None)
+        ext = tldextract.TLDExtract(extract_cache_file)
         result = self.match()
         if result:
             return ext(result)
-        else:
-            return None
+        return None
 
     def registered(self):
         """
@@ -60,5 +58,4 @@ class Domain(object):
         result = self.extract()
         if result:
             return result.registered_domain
-        else:
-            return None
+        return None

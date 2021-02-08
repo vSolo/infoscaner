@@ -2,6 +2,8 @@
 
 ## 环境配置
 
+目前infoscaner仅支持在linux上运行，建议运行在最新版本的kali中
+
 infoscaner是基于python3版本实现的，运行之前首先安装python库
 
 如果同时存在python2和python3,请输入以下命令
