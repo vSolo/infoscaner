@@ -36,7 +36,7 @@ python3 infoscaner.py -h
 python3 infoscaner.py -u vulnweb.com
 ```
 
-![image-20201006103813786](C:\Users\19711\AppData\Roaming\Typora\typora-user-images\image-20201006103813786.png)
+![image-20201006103813786](https://nimg.ws.126.net/?url=http%3A%2F%2Fdingyue.ws.126.net%2F2021%2F0204%2F26c8b66ej00qo06ds0015c000hs00cac.jpg&thumbnail=650x2147483647&quality=80&type=jpg)
 
 ### 获取旁站或C站信息
 
@@ -44,7 +44,7 @@ python3 infoscaner.py -u vulnweb.com
 python3 infoscaner.py -u vulnweb.com -N
 ```
 
-![image-20201006103944217](C:\Users\19711\AppData\Roaming\Typora\typora-user-images\image-20201006103944217.png)
+![image-20201006103944217](https://nimg.ws.126.net/?url=http%3A%2F%2Fdingyue.ws.126.net%2F2021%2F0204%2Fe93f9552j00qo06ds000lc000hs0079c.jpg&thumbnail=650x2147483647&quality=80&type=jpg)
 
 ### 获取CMS指纹信息
 
@@ -52,7 +52,7 @@ python3 infoscaner.py -u vulnweb.com -N
 python3 infoscaner.py -u vulnweb.com -C
 ```
 
-![image-20201006104108785](C:\Users\19711\AppData\Roaming\Typora\typora-user-images\image-20201006104108785.png)
+![image-20201006104108785](https://nimg.ws.126.net/?url=http%3A%2F%2Fdingyue.ws.126.net%2F2021%2F0204%2F47674a01j00qo06ds000wc000hs00c8c.jpg&thumbnail=650x2147483647&quality=80&type=jpg)
 
 ### 获取ICP备案号
 
@@ -68,7 +68,7 @@ python3 infoscaner.py -u baidu.com -i
 python3 infoscaner.py -u testphp.vulnweb.com -n
 ```
 
-![image-20201006104748962](C:\Users\19711\AppData\Roaming\Typora\typora-user-images\image-20201006104748962.png)
+![image-20201006104748962](https://nimg.ws.126.net/?url=http%3A%2F%2Fdingyue.ws.126.net%2F2021%2F0204%2F28a5c0d3j00qo06ds0014c000hs00e6c.jpg&thumbnail=650x2147483647&quality=80&type=jpg)
 
 ### 获取全部信息
 
@@ -100,7 +100,7 @@ python3 infoscaner.py -u 192.168.2.128 -d all -t 15
 python3 infoscaner.py -u 192.168.2.207 -W
 ```
 
-![image-20201006110213244](C:\Users\19711\AppData\Roaming\Typora\typora-user-images\image-20201006110213244.png)
+![image-20201006110213244](https://nimg.ws.126.net/?url=http%3A%2F%2Fdingyue.ws.126.net%2F2021%2F0204%2F3a366e73j00qo06ds000zc000hs00c9c.jpg&thumbnail=650x2147483647&quality=80&type=jpg)
 
 ### 简单whois输出
 
@@ -126,7 +126,7 @@ python3 infoscaner.py -u 192.168.2.1 -a
 python3 infoscaner.py -u 192.168.2.1 -p 80,445
 ```
 
-![image-20201006111608215](C:\Users\19711\AppData\Roaming\Typora\typora-user-images\image-20201006111608215.png)
+![image-20201006111608215](https://nimg.ws.126.net/?url=http%3A%2F%2Fdingyue.ws.126.net%2F2021%2F0204%2Ff2db096ej00qo06ds000pc000hs006dc.jpg&thumbnail=650x2147483647&quality=80&type=jpg)
 
 ## 获取子域名
 
