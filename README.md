@@ -28,7 +28,7 @@ infoscaner在主机扫描时调用了Nmap，请安装Nmap
 python3 infoscaner.py -h
 ```
 
-![image-20201006103648177](C:\Users\19711\AppData\Roaming\Typora\typora-user-images\image-20201006103648177.png)
+![image-20201006103648177](https://nimg.ws.126.net/?url=http%3A%2F%2Fdingyue.ws.126.net%2F2021%2F0204%2Ff2a21e50j00qo06ds001bc000hs00dxc.jpg&thumbnail=650x2147483647&quality=80&type=jpg)
 
 ### 默认扫描目标信息(WHOIS扫描)
 
